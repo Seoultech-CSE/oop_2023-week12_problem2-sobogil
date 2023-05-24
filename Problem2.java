@@ -12,7 +12,18 @@ public class Problem2 {
         /*
           Rational class를 참고하여 코드 작성
         */
-      
+        Number h= new Rational(-b,2*a);
+        System.out.println("h is "+h);
+
+        Rational num1= new Rational(b, 4);
+        Rational num2 =new Rational(b, a);
+        //b/4와 b/a를 mutiply해서 b^2/4a를 만든다
+        Rational k=num1.multiply(num2);
+        
+        Rational ccc= new Rational(c, 1);
+        k=ccc.subtract(k);
+        System.out.println("k is "+k);
+
     }
   
     static class Rational extends Number implements Comparable<Rational> {
